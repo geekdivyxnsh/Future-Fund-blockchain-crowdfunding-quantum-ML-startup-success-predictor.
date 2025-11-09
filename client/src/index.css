@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* Growth investing palette (light, trustworthy) */
+  --bg: #f5f7f9; /* soft light background */
+  --bg-1: #ffffff; /* base surface */
+  --bg-2: #eef5f0; /* pale green tint */
+  --card: #ffffff; /* card surface */
+  --accent: #0b6b3a; /* evergreen primary */
+  --accent-2: #27ae60; /* growth green */
+  --gold: #b08a00; /* wealth accent */
+  --danger: #d04f4f;
+
+  /* Type & radii */
+  --blur: 8px;
+  --r: 14px;
+  --shadow: 0 14px 30px rgba(16, 24, 40, 0.08);
+
+  /* Text colors */
+  --text-primary: #132a1f;
+  --text-secondary: #3a4a41;
+  --text-muted: #6b7b71;
+
+  /* App surfaces */
+  --bg-app: var(--bg);
+  --bg-surface: var(--bg-1);
+}
+
+html, body, #root {
+  background: var(--bg-app);
+  color: var(--text-primary);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--r);
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.kpi-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.neon-btn {
+  position: relative;
+  color: #ffffff;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+  border-radius: 10px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.neon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(11, 107, 58, 0.25);
+}
+.neon-btn.secondary {
+  background: var(--gold);
+  color: #1f2a24;
+}
+.neon-outline {
+  border: 1px solid rgba(16, 24, 40, 0.14);
+  background: transparent;
+  color: var(--text-primary);
+}
+.neon-outline:hover {
+  border-color: rgba(16, 24, 40, 0.22);
+  box-shadow: 0 6px 16px rgba(176, 138, 0, 0.18);
+}
+
+.linear-gradient {
+  background: linear-gradient(180deg, rgba(11,107,58,0.06) 0%, rgba(39,174,96,0.04) 100%);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.2);
+}
+
+/* Animated slider for success threshold */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  outline: none;
+  background: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    var(--accent) var(--progress, 0%),
+    rgba(16,24,40,0.12) var(--progress, 0%),
+    rgba(16,24,40,0.12) 100%
+  );
+  transition: background 150ms ease-out;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(11, 107, 58, 0.18);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.slider:hover::-webkit-slider-thumb {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 6px rgba(11, 107, 58, 0.24);
+}
+
+.slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  background: var(--accent);
+  border: none;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Utility backgrounds and borders for glass theme */
+.bg-app {
+  background: radial-gradient(900px 500px at 10% 10%, rgba(11,107,58,0.06), transparent 45%),
+              radial-gradient(700px 380px at 85% 15%, rgba(176,138,0,0.06), transparent 55%),
+              var(--bg);
+}
+.surface {
+  background: var(--bg-surface);
+  border: 1px solid rgba(16,24,40,0.08);
+}
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+
+/* Simple radial gauge (CSS-only) */
+.gauge {
+  --val: 0; /* percentage 0-100 */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background:
+    conic-gradient(var(--accent-2) calc(var(--val) * 1%), rgba(16,24,40,0.12) 0);
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0 20px rgba(11,107,58,0.08);
+}
+.gauge > .inner {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(16,24,40,0.1);
+  display: grid;
+  place-items: center;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}

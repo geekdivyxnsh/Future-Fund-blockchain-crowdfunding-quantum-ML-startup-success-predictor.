@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#3a3a43" stroke-width="20"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#4acd8d" stroke-width="20" stroke-dasharray="502" stroke-dashoffset="125"/>
+  <text x="100" y="100" font-family="Arial" font-size="24" fill="white" text-anchor="middle" dominant-baseline="middle">75%</text>
+  <text x="100" y="130" font-family="Arial" font-size="14" fill="#808191" text-anchor="middle" dominant-baseline="middle">Success</text>
+</svg>
