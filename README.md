@@ -1,154 +1,247 @@
-# 🚀 Web3 Crowdfunding Platform
 
-A decentralized crowdfunding platform built with React, Solidity, and Web3 technologies.
+# 🚀 Future Fund — Quantum ML + Blockchain Crowdfunding Platform
 
-## ✨ Features
-
-- 🎯 **Create Campaigns**: Launch crowdfunding campaigns with custom goals and deadlines
-- 💰 **Donate**: Support campaigns with cryptocurrency donations
-- 📊 **Track Progress**: Monitor campaign funding progress in real-time
-- 👤 **User Profiles**: Manage your campaigns and donation history
-- 🔗 **Web3 Integration**: Built on Ethereum Sepolia testnet
-- 🎨 **Modern UI**: Beautiful, responsive design with Tailwind CSS
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **React** - User interface framework
-- **Vite** - Build tool and development server
-- **Tailwind CSS** - Styling framework
-- **Thirdweb** - Web3 SDK for blockchain interactions
-
-### Smart Contracts
-- **Solidity** - Smart contract programming language
-- **Hardhat** - Development environment
-- **Ethereum Sepolia** - Testnet deployment
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js (v16 or higher)
-- MetaMask wallet
-- Sepolia testnet ETH
- - Thirdweb client ID for the frontend (`VITE_THIRDWEB_CLIENT_ID`)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/crowdfunding-platform.git
-   cd crowdfunding-platform
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Install client dependencies
-   cd client
-   npm install
-   
-   # Install smart contract dependencies
-   cd ../web3
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   cd client
-   npm run dev
-   ```
-
-4. **Connect your wallet**
-   - Install MetaMask browser extension
-   - Switch to Sepolia testnet
-   - Get test ETH from [Sepolia Faucet](https://sepoliafaucet.com/)
-
-## 📋 Smart Contract
-
-- **Contract Address**: `0x40b6de6eCB78ef8fFc599d5FA215596386339c29`
-- **Network**: Ethereum Sepolia Testnet
-- **Explorer**: [View on Etherscan](https://sepolia.etherscan.io/address/0x40b6de6eCB78ef8fFc599d5FA215596386339c29)
-
-## 🔧 Development
-
-### Smart Contract Deployment
-```bash
-cd web3
-npx thirdweb deploy -k YOUR_SECRET_KEY
-```
-
-### Frontend Development
-```bash
-cd client
-npm run dev
-```
-
-### Environment Variables (Frontend)
-
-Create a `.env` file inside `client/` and set:
-
-```bash
-VITE_THIRDWEB_CLIENT_ID=your_thirdweb_client_id
-```
-
-The contract address for the dApp is currently hardcoded in `client/src/context/index.jsx`. If you redeploy the contract, update the `CONTRACT_ADDRESS` constant there.
-
-## 📁 Project Structure
-
-```
-project_crowdfunding/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/         # Page components
-│   │   ├── context/       # React context for Web3
-│   │   └── assets/        # Images and icons
-│   └── package.json
-├── web3/                  # Smart contracts
-│   ├── contracts/         # Solidity contracts
-│   ├── scripts/          # Deployment scripts
-│   └── hardhat.config.js
-└── README.md
-```
-
-## 🌐 Deployment
-
-### Vercel Deployment
-This repository is a monorepo. The frontend lives in `client/`. To deploy the frontend on Vercel:
-
-1. Push your code to GitHub.
-2. In Vercel, create a new project and select this repository.
-3. Set Root Directory to `client` in Vercel project settings.
-4. Add the environment variable `VITE_THIRDWEB_CLIENT_ID` in the Vercel dashboard.
-5. Keep the default build and output settings for Vite (`npm run build`, output: `dist`).
-6. A `vercel.json` is included in `client/` to route SPA paths to `index.html`.
-
-If you want to deploy the backend (FastAPI + Qiskit), use a separate host (Render, Railway, Fly.io, etc.) or a container platform using the provided `Dockerfile` and `docker-compose.yml`.
-
-### Smart Contract Deployment
-The smart contract is already deployed on Sepolia testnet. To deploy to mainnet or other networks, update the configuration in `web3/hardhat.config.js`.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Thirdweb](https://thirdweb.com/) for Web3 SDK
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Vite](https://vitejs.dev/) for build tooling
-
-## 📞 Support
-
-If you have any questions or need help, please open an issue on GitHub.
+**Future Fund** is a decentralized crowdfunding platform built on **Ethereum (Sepolia)**, enhanced with **Quantum Machine Learning–driven predictions**.
+It combines blockchain transparency with AI foresight — allowing users to **launch campaigns, invest securely, and explore predictive insights** through an interactive marketplace.
 
 ---
 
-**Happy Crowdfunding! 🎉**
+## 🌟 Key Highlights
+
+* 🪙 **On-Chain Campaigns:** Create, manage, and track decentralized crowdfunding campaigns.
+* 💸 **Invest with MetaMask:** Donate or invest using your Ethereum wallet in real time.
+* 📈 **Prediction Marketplace:** Explore campaigns enriched with Quantum ML–based success scores and visual insights.
+* 📊 **Dynamic Analytics:** Prediction panel includes profit projections (low/avg/high), line charts, doughnut charts, and candlestick views.
+* 🧠 **Domain Visuals:** Category icons (eco, health, edu, finance, etc.) personalize campaign cards.
+* 💡 **UI Design:** “Grow Your Money” theme using Tailwind CSS for a clean, modern aesthetic.
+
+---
+
+## 🧰 Tech Stack
+
+**Frontend:** `React`, `Vite`, `Tailwind CSS`, `Chart.js`, `thirdweb`
+**Smart Contracts:** `Solidity`, `Hardhat`, `thirdweb CLI`
+**Optional Backend:** `FastAPI`, `Python 3.9`, `Qiskit` for Quantum ML predictions
+
+---
+
+### 🖼️ UI Preview
+
+<img width="1664" height="822" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/e7d35141-847b-4d4d-aa42-513f46b1aa86" />
+
+<img width="680" height="874" alt="Campaign Details Screenshot" src="https://github.com/user-attachments/assets/c372a692-8812-4430-b300-fe2d2e33ef20" />
+
+---
+
+## 📂 Project Structure
+
+```
+CrowdFunding-Platform/
+├─ client/                 # Frontend (deploy on Vercel)
+│  ├─ src/
+│  │  ├─ components/       # Reusable UI components
+│  │  ├─ pages/            # Core pages (Home, Marketplace, etc.)
+│  │  ├─ context/          # Thirdweb/Ethers provider logic
+│  │  ├─ assets/           # Logos & icons
+│  │  └─ main.jsx          # Root file with provider setup
+│  ├─ vercel.json          # SPA rewrites
+│  └─ package.json
+├─ web3/                   # Smart contracts
+│  ├─ contracts/           # Solidity source
+│  └─ scripts/             # Deployment & verification
+├─ backend/                # (Optional) FastAPI + Qiskit ML service
+└─ README.md
+```
+
+---
+
+## ⚙️ Installation Guide
+
+### 🔽 Download Options
+
+**Option 1: ZIP**
+
+1. Visit the GitHub repository.
+2. Click **Code → Download ZIP**
+3. Extract and open the folder in your IDE.
+
+**Option 2: Clone with Git**
+
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
+
+---
+
+### 🧩 Prerequisites
+
+* Node.js `>=16`
+* MetaMask (browser extension)
+* Sepolia testnet ETH
+* Thirdweb Client ID
+* (Optional) Python 3.9 for backend/QML service
+
+---
+
+### 🖥️ Frontend Setup
+
+```bash
+cd client
+npm install
+
+# Add your Thirdweb Client ID
+echo VITE_THIRDWEB_CLIENT_ID=your_thirdweb_client_id > .env
+
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) and connect your wallet.
+
+---
+
+### 💎 Smart Contract Deployment (Sepolia)
+
+```bash
+cd web3
+npm install
+```
+
+Create `.env` inside `web3/`:
+
+```
+PRIVATE_KEY=your_private_key
+SEPOLIA_RPC_URL=https://rpc.ankr.com/eth_sepolia
+ETHERSCAN_API_KEY=optional
+```
+
+Deploy:
+
+```bash
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+Then update `CONTRACT_ADDRESS` inside
+`client/src/context/index.jsx` → restart `npm run dev`.
+
+> 🔒 **Tip:** Never commit secrets. Store keys in `.env` or CI/CD configs.
+
+---
+
+### 🧠 Optional Backend (Quantum ML)
+
+Run a FastAPI + Qiskit backend for real QML predictions.
+
+```bash
+cd backend
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Frontend connects via `VITE_API_URL`.
+In Docker Compose, this is configured automatically.
+
+---
+
+## 🪄 Usage Guide
+
+1. **Connect** MetaMask to Sepolia.
+2. **Create Campaign:** Set title, goal, deadline, and image.
+3. **Explore Marketplace:** Browse campaigns with prediction insights.
+4. **View Prediction Panel:** Analyze projected profits and trend charts.
+5. **Invest or Donate:** Fund campaigns and monitor progress live.
+6. **Profile Page:** Track all campaigns and donations.
+
+---
+
+## 🔐 Environment Variables (Frontend)
+
+| Variable                  | Description                         |
+| ------------------------- | ----------------------------------- |
+| `VITE_THIRDWEB_CLIENT_ID` | Thirdweb Client ID (safe to expose) |
+
+---
+
+## 🚀 Deploy to Vercel
+
+Deploy only the `client` directory.
+
+**Vercel Settings**
+
+* Root Directory → `client`
+* Framework Preset → `Vite`
+* Build Command → `npm run build`
+* Output Directory → `dist`
+* Add Env Var → `VITE_THIRDWEB_CLIENT_ID`
+
+> Backend can be deployed separately on **Render**, **Railway**, or a **Docker VM**.
+
+---
+
+## 🐳 Docker (Optional)
+
+Launch frontend + backend together:
+
+```bash
+docker-compose up --build
+```
+
+Runs:
+
+* Frontend → `http://localhost:5173`
+* Backend → `http://localhost:8000`
+
+---
+
+## 🧩 Troubleshooting
+
+| Issue               | Fix                                      |
+| ------------------- | ---------------------------------------- |
+| `clientId required` | Check `.env` + Vercel env vars           |
+| Chain mismatch      | Switch MetaMask to Sepolia               |
+| CORS errors         | Enable frontend origin in backend config |
+| Fonts ORB warning   | Safe to ignore                           |
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create branch: `git checkout -b feature/<name>`
+3. Commit: `git commit -m "feat: <change>"`
+4. Push: `git push origin feature/<name>`
+5. Open a PR 🎉
+
+---
+
+## 🙏 Acknowledgments
+
+* [Thirdweb](https://thirdweb.com/) — Web3 SDK & infra
+* [Tailwind CSS](https://tailwindcss.com/) — Styling
+* [Vite](https://vitejs.dev/) — Build tool
+* [Chart.js](https://www.chartjs.org/) — Data visualization
+
+---
+
+## 👨‍💻 Developer
+
+**Divyanshu Kumar**
+📧 [geekdivyxnsh@gmail.com](mailto:geekdivyxnsh@gmail.com)
+🌐 [Portfolio: Clinical AI Assistant]()
+💼 [LinkedIn](https://linkedin.com/in/k-divyanshu)
+💻 [GitHub](https://github.com/geekdivyxnsh)
+
+---
+
+## 📄 License & Usage
+
+This project is open for **educational and portfolio use**.
+For collaboration or commercial licensing, contact the developer directly.
+
+⭐ **Star this repo** if you find it inspiring!
+🔗 **Live Demo** | 💼 **LinkedIn** | 📧 **Email**
+
+**Happy Building, Happy Investing! 🚀**
+
