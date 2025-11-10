@@ -240,7 +240,6 @@ This project is open for **educational and portfolio use**.
 For collaboration or commercial licensing, contact the developer directly.
 
 ⭐ **Star this repo** if you find it inspiring!
-🔗 **Live Demo** | 💼 **LinkedIn** | 📧 **Email**
-
+live demo: https://future-fund-blockchain-crowdfunding.vercel.app/
 **Happy Building, Happy Investing! 🚀**
 
