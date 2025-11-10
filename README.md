@@ -229,7 +229,6 @@ Runs:
 
 **Divyanshu Kumar**
 📧 [geekdivyxnsh@gmail.com](mailto:geekdivyxnsh@gmail.com)
-🌐 [Portfolio: Clinical AI Assistant]()
 💼 [LinkedIn](https://linkedin.com/in/k-divyanshu)
 💻 [GitHub](https://github.com/geekdivyxnsh)
 
